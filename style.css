@@ -1,0 +1,173 @@
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --primary: #0f172a;
+  --accent: #1d4ed8;
+  --highlight: #dbeafe;
+  --text: #1f2937;
+  --muted: #5b6475;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container {
+  width: min(1150px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: white;
+  padding: 70px 0 50px;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+h2 {
+  margin: 8px 0 0;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+}
+
+.subtitle {
+  margin-top: 14px;
+  font-size: 1.06rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.contact-box {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 14px;
+  padding: 18px 22px;
+  min-width: 240px;
+}
+
+.contact-box p {
+  margin: 0;
+  font-weight: 600;
+}
+
+main {
+  padding: 30px 0 80px;
+}
+
+.section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+}
+
+.section h3 {
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.section p,
+.section li {
+  color: var(--text);
+}
+
+.job {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  margin-top: 18px;
+}
+
+.job:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.job-head strong {
+  color: var(--accent);
+}
+
+.job-head span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: var(--highlight);
+  color: #1e3a8a;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding: 22px 18px;
+  }
+}
